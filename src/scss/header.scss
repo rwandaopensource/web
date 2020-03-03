@@ -1,0 +1,23 @@
+.header {
+  border: 1px solid $secondary-color;
+  width: 100%;
+  .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 2vw;
+    margin-left: 1vw;
+  }
+  a.header-link {
+    color: $logo-color;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+  }
+  .navbar-link::after {
+    border-color:$logo-color;
+  }
+  .brand-logo{
+    color: $logo-color;
+    width: 20px;
+    height: auto;
+    margin-right: 1vw;
+  }
+}

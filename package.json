@@ -1,0 +1,83 @@
+{
+  "name": "opensource.org.rw",
+  "version": "1.0.0",
+  "description": "Website(frontend) for opensource.org.rw",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "serve ./dist -l 8080",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && NODE_ENV=production webpack --config webpack.config.js && npm run favicon",
+    "favicon": "cp ./public/favicon.ico ./dist/favicon.ico",
+    "test": "NODE_ENV=test jest --c=jest.config.js  --logHeapUsage --runInBand",
+    "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --hot --open",
+    "lint": "eslint ./src/**/**.js ./src/**/**.jsx ./src/**/**.json --no-error-on-unmatched-pattern"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwandaopensource/opensource.org.rw.git"
+  },
+  "keywords": [
+    "opensource.org.rw"
+  ],
+  "author": "Rwanda Open Source",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/rwandaopensource/opensource.org.rw/issues"
+  },
+  "homepage": "https://github.com/rwandaopensource/opensource.org.rw#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "file-loader": "^5.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "axios": "^0.19.2",
+    "bulma": "^0.8.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jquery": "^3.4.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "serve": "^11.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
+  }
+}

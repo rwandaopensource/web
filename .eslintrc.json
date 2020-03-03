@@ -1,0 +1,47 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest": true
+	},
+	"extends": ["airbnb", "prettier", "prettier/react"],
+	"parserOptions": {
+		"ecmaVersion": 2018
+	},
+	"settings": {
+		"import/resolver": {
+				"node": {
+						"extensions": [".json", ".ts", ".js"]
+				}
+		}
+  },
+	"plugins": ["react", "prettier"],
+	"rules": {
+		"prefer-object-spread": 0,
+		"no-console": "warn",
+		"indent": [ 1, 2 ],
+		"no-unused-expressions":"error",
+		"no-multiple-empty-lines":"warn",
+		"no-trailing-spaces": "warn",
+		"eol-last": "warn",
+		"arrow-parens":"off",
+		"no-underscore-dangle":"off",
+		"react/jsx-filename-extension": "off",
+		"import/no-named-as-default": "off",
+		"react/jsx-props-no-spreading": "off",
+		"jsx-a11y/anchor-is-valid": "off"
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true,
+    "Headers": true,
+    "Request": true,
+    "fetch": true
+  },
+	"parser": "babel-eslint"
+}

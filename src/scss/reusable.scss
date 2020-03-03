@@ -1,0 +1,20 @@
+.page-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 1vw;
+  background-color: $primary-background-color;
+  padding: 1rem 0.5rem 1rem;
+}
+
+.footer::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  border-bottom: 1px solid $secondary-color;
+  margin-bottom: 1vw;
+}

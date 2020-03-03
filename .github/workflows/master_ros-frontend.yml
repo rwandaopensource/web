@@ -27,9 +27,9 @@ jobs:
         npm run test --if-present
 
     - name: 'Deploy to Azure Web App'
-      uses: azure/webapps-deploy@v1
+      uses: azure/webapps-deploy@v2
       with:
-        app-name: 'ros-frontend'
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_1a8af05d698b4ccc9fd7975498003922 }}
         package: .
