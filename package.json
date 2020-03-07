@@ -4,7 +4,7 @@
   "description": "Website(frontend) for opensource.org.rw",
   "main": "src/index.js",
   "scripts": {
-    "start": "serve ./dist -l 8080",
+    "start": "serve ./dist",
     "clean": "rm -rf ./dist",
     "build": "npm run clean && NODE_ENV=production webpack --config webpack.config.js && npm run favicon",
     "favicon": "cp ./public/favicon.ico ./dist/favicon.ico",

@@ -6,13 +6,13 @@ This is the Frontend of opensource.org.rw, find the backend [here](https://githu
 
 ### DEPLOYMENTS
 - develop branch(staging) is deployed at [staging.opensource.org.rw](https://staging.opensource.org.rw)
-- master branch(production) is deployed at [www.opensource.org.rw](http://www.opensource.org.rw) or [opensource.org.rw](http://opensource.org.rw)
+- master branch(production) is deployed at [www.opensource.org.rw](https://www.opensource.org.rw) or [opensource.org.rw](https://opensource.org.rw)
 
 
 The main reason behind this website is to help people know:
 - what we are building.
 - stories inside our workspace.
-- Services for our contributors.
+- offer Services for our contributors.
 - to implement the features from the backend, read this backend [README](https://github.com/rwandaopensource/backend.opensource.org.rw#readme)
 
 

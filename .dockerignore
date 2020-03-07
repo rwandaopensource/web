@@ -1,0 +1,15 @@
+.circleci/
+.git/
+dist/
+coverage/
+node_modules/
+.env
+.env.test
+.env.production
+.env.development
+.env.example
+.gitignore
+README.md
+yarn-error.log
+.vs-code/
+.github/
