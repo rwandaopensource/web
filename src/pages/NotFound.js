@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -12,12 +11,17 @@ class NotFound extends React.Component {
 
   render() {
     return (
-      <div className='page-container'>
+      <div className='page-container section'>
         <Header />
+        <div className=' container content has-stext-centered'>
+          <div className='title is-4'>
+              We can&apos;t find what you are looking for!
+          </div>
+        </div>
         <Footer />
       </div>
     )
   }
 }
 
-export default connect()(NotFound);
+export default NotFound;

@@ -1,23 +1,18 @@
 .header {
-  border: 1px solid $secondary-color;
   width: 100%;
+  background-color: inherit;
+  padding: 1vw;
+  margin-bottom: 1vw;
   .logo {
-    width: 50px;
+    width: 40px;
     height: auto;
-    margin-right: 2vw;
-    margin-left: 1vw;
+    margin-left: 2vw;
+    margin-right: 1vw;
   }
   a.header-link {
-    color: $logo-color;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+    color: $secondary-color;
   }
   .navbar-link::after {
-    border-color:$logo-color;
-  }
-  .brand-logo{
-    color: $logo-color;
-    width: 20px;
-    height: auto;
-    margin-right: 1vw;
+    border-color:$secondary-color;
   }
 }
