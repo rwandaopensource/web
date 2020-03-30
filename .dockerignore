@@ -11,5 +11,8 @@ node_modules/
 .gitignore
 README.md
 yarn-error.log
-.vs-code/
+.vscode/
 .github/
+**/**.test.js
+**/**.spec.js
+**.yml

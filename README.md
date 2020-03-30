@@ -1,6 +1,6 @@
 # opensource.org.rw
 [![Build Status](https://dev.azure.com/urbainishimwe/opensource.org.rw/_apis/build/status/rwandaopensource.opensource.org.rw?branchName=develop)](https://dev.azure.com/urbainishimwe/opensource.org.rw/_build/latest?definitionId=5&branchName=develop)
-![Build and deploy Node.js app to Azure Web App - ros-frontend(staging)](https://github.com/rwandaopensource/opensource.org.rw/workflows/Build%20and%20deploy%20Node.js%20app%20to%20Azure%20Web%20App%20-%20ros-frontend(staging)/badge.svg?branch=develop)
+![Azure deploy](https://github.com/rwandaopensource/opensource.org.rw/workflows/Build%20and%20deploy%20Node.js%20app%20to%20Azure%20Web%20App%20-%20ros-frontend(staging)/badge.svg?branch=develop)
 
 This is the Frontend of opensource.org.rw, find the backend [here](https://github.com/rwandaopensource/backend.opensource.org.rw)
 
