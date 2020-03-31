@@ -1,0 +1,84 @@
+.title {
+  margin-top: 2rem;
+}
+
+.members {
+
+  .member-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .member-card {
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .member-card:hover {
+    cursor: pointer;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    margin: 2rem;
+  }
+
+  .content {
+    text-align: left;
+    font-size: 14px;
+    color: #4a4a4aa6;
+  }
+
+  .member-details {
+    margin-bottom: 10px;
+
+    .name {
+      font-weight: 600;
+    }
+
+    .bio {
+      font-size: 14px;
+      opacity: 0.5;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+
+    .button {
+      background-color: #C4C4C4;
+      color: white;
+    }
+
+    .fas-space {
+      padding-right: 4px;
+      color: $primary-background-color;
+
+    }
+  }
+
+}
