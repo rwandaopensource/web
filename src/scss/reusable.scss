@@ -1,7 +1,10 @@
-body, #root, html {
+body,
+#root,
+html {
   margin: 0;
   padding: 0;
   background-color: $primary-background-color;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .page-container {
@@ -37,52 +40,72 @@ $size-3: 50px;
 $size-2: 60px;
 $size-1: 70px;
 $sizes: (1, 2, 3, 4, 5, 6, 7);
-$positions: ("top", "left", "bottom","right");
+$positions: ("top", "left", "bottom", "right");
 $bulmaSizes: ($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7);
 $i: 1;
+
 @each $size in $sizes {
-	$sizee: nth($bulmaSizes, $i);
-	$i: $i+1;
-	.has-margin-#{$size} {
-		margin: $sizee !important;
+  $sizee: nth($bulmaSizes, $i);
+  $i: $i+1;
+
+  .has-margin-#{$size} {
+    margin: $sizee !important;
   }
-	.has-negative-margin-#{$size} {
-		margin: -$sizee !important;
-	}
-	.has-padding-#{$size} {
-		padding: $sizee !important;
+
+  .has-negative-margin-#{$size} {
+    margin: -$sizee !important;
   }
+
+  .has-padding-#{$size} {
+    padding: $sizee !important;
+  }
+
   @media screen and (max-width: 768px) {
     .has-margin-#{$size}-mobile {
       margin: $sizee !important;
     }
+
     .has-negative-#{$size}-mobile {
       margin: -$sizee !important;
     }
+
     .has-padding-#{$size}-mobile {
-      padding: $sizee !important;
+      padding-left: $sizee !important;
+      text-align: left;
     }
+
+    .is-#{$size}-mobile {
+      text-align: left;
+      padding-left: $sizee !important;
+    }
+
   }
-	@each $position in $positions {
-		.has-margin-#{$position}-#{$size} {
-			margin-#{$position}: $sizee !important;
-		}
-		.has-padding-#{$position}-#{$size} {
-			padding-#{$position}: $sizee !important;
-		}
-		.has-negative-margin-#{$position}-#{$size} {
-			margin-#{$position}: -$sizee !important;
+
+  @each $position in $positions {
+    .has-margin-#{$position}-#{$size} {
+      margin-#{$position}: $sizee !important;
     }
+
+    .has-padding-#{$position}-#{$size} {
+      padding-#{$position}: $sizee !important;
+    }
+
+    .has-negative-margin-#{$position}-#{$size} {
+      margin-#{$position}: -$sizee !important;
+    }
+
     @media screen and (max-width: 768px) {
       .has-margin-#{$position}-#{$size}-mobile {
         margin-#{$position}: $sizee !important;
       }
+
       .has-padding-#{$position}-#{$size}-mobile {
         padding-#{$position}: $sizee !important;
       }
+
       .has-negative-margin-#{$position}-#{$size}-moble {
         margin-#{$position}: -$sizee !important;
       }
     }
-	}
+  }
 }
