@@ -8,7 +8,7 @@
     "clean": "rm -rf ./dist",
     "build": "npm run clean && NODE_ENV=production webpack --config webpack.config.js && npm run favicon",
     "favicon": "cp ./public/favicon.ico ./dist/favicon.ico",
-    "test": "NODE_ENV=test jest --c=jest.config.js  --logHeapUsage --runInBand",
+    "test": "NODE_ENV=test jest --c=jest.config.js  --logHeapUsage --forceExit",
     "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --hot --open",
     "lint": "eslint ./src/**/**.js ./src/**/**.jsx ./src/**/**.json --no-error-on-unmatched-pattern"
   },

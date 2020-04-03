@@ -92,7 +92,7 @@ class Footer extends React.Component {
             </a>
             <br />
             <a
-              href="http://bit.ly/2VmpgVp"
+              href="https://bit.ly/2JANowH"
               target="_blank"
               rel="noopener noreferrer"
               title="slack"
