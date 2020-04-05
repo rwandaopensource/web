@@ -15,9 +15,6 @@ export class Members extends React.Component {
 
   render() {
     const { members, status } = this.props;
-    {
-      console.log(status);
-    }
     return (
       <div className="page-container section">
         <Header />
