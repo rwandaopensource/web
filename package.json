@@ -6,11 +6,11 @@
   "scripts": {
     "start": "serve ./dist",
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && NODE_ENV=production webpack --config webpack.config.js && npm run favicon",
+    "build": "yarn clean && NODE_ENV=production webpack --config webpack.config.js && yarn favicon",
     "favicon": "cp ./public/favicon.ico ./dist/favicon.ico",
-    "test": "NODE_ENV=test jest --c=jest.config.js  --logHeapUsage --forceExit",
-    "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --hot --open",
-    "lint": "eslint ./src/**/**.js ./src/**/**.jsx ./src/**/**.json --no-error-on-unmatched-pattern"
+    "test": "NODE_ENV=test jest --c=jest.config.js --logHeapUsage --runInBand  --no-cache  --detectOpenHandles --forceExit",
+    "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --hot",
+    "lint": "eslint ./src/**/**.js ./src/**/**.jsx ./src/**/**.json --no-error-on-unmatched-pattern --fix"
   },
   "repository": {
     "type": "git",
@@ -65,8 +65,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm test"
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn test"
     }
   }
 }

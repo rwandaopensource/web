@@ -1,13 +1,13 @@
 FROM node:12-alpine
 
-RUN mkdir -p /home/site/wwwroot
-WORKDIR /home/site/wwwroot
+RUN mkdir -p /app
+WORKDIR /app
 COPY . .
-RUN npm install && \
-    npm run build && \
+RUN yarn && \
+    yarn build && \
     rm -rf public/ && \
     rm -rf node_modules/ && \
     rm -rf src/
-RUN npm install --only=production
+RUN yarn install --production=true
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]

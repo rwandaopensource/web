@@ -1,7 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy Node.js app to Azure Web App - ros-frontend
+name: Master Deploy
 
 on:
   push:
@@ -9,19 +6,23 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  build:
+    name: build
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@master
 
-    - uses: azure/docker-login@v1
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: build and push image
+      uses: docker/build-push-action@v1
       with:
-        login-server: rosdocker.azurecr.io
-        username: ${{ secrets.REGISTRY_USERNAME }}
+        username: ${{ secrets.REGISTRY_USERNAME  }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
+        repository: rwandaopensource/opensource
+        tags: lts
 
-    - name: 'Building image and pushing image'
-      run: |
-          docker build . -t rosdocker.azurecr.io/app:latest
-          docker push rosdocker.azurecr.io/app:latest
+    - name: trigger netlify build hooks
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d '{}' ${{ secrets.PRODUCTION_BUILD_HOOK }}

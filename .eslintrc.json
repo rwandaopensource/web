@@ -16,7 +16,10 @@
 				"node": {
 						"extensions": [".json", ".js", ".jsx"]
 				}
-		}
+		},
+		"react": {
+      "version": "detect"
+    }
   },
 	"rules": {
 		"prefer-object-spread": 0,
