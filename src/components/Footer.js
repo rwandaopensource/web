@@ -23,9 +23,9 @@ class Footer extends React.Component {
           <div className="column">
             <p className="has-text-black menu-label"> Pages </p>
             <br />
-            <a href="/projects" className="has-text-white">
+            <a href="/blog" className="has-text-white">
               {" "}
-              Projects{" "}
+              Blog{" "}
             </a>
             <br />
             <a href="teams" className="has-text-white">
@@ -45,11 +45,6 @@ class Footer extends React.Component {
           </div>
           <div className="column">
             <p className="has-text-black menu-label"> More </p>
-            <br />
-            <a href="/wiki" className="has-text-white">
-              {" "}
-              Wiki{" "}
-            </a>
             <br />
             <a href="/services" className="has-text-white">
               {" "}
@@ -81,7 +76,7 @@ class Footer extends React.Component {
             </a>
             <br />
             <a
-              href="https://twitter.com/rwanda_open"
+              href="https://twitter.com/opensource_rw"
               target="_blank"
               rel="noopener noreferrer"
               title="twitter"

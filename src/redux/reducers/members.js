@@ -1,6 +1,9 @@
 const initialState = {
   members: [],
   status: 0,
+  pending: false,
+  page: 1,
+  more: true,
 };
 
 export default (state = initialState, action) => {
@@ -9,17 +12,21 @@ export default (state = initialState, action) => {
   case "MEMBERS_PENDING":
     return {
       ...state,
-      status: 1,
+      pending: true
     };
   case "MEMBERS_FINISH":
     return {
-      ...state,
-      ...payload,
+      status: payload.status,
+      members: state.members.concat(payload.members),
+      page: payload.page,
+      pending: false,
+      more: payload.members.length !== 0,
     };
   case "MEMBERS_FAIL":
     return {
       ...state,
       ...payload,
+      pending: false,
     };
   default:
     return state;

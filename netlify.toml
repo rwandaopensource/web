@@ -1,0 +1,15 @@
+[build]
+  base = ""
+  publish = "dist/"
+  command = "yarn && yarn build"
+  environment = { NODE_ENV = "production", NODE_VERSION = "12.6.1" }
+[context.production]
+  publish = "dist/"
+  command = "yarn && yarn build"
+  environment = { NODE_ENV = "production", NODE_VERSION = "12.6.1" }
+# The following redirect is intended for use with most SPAs that handle
+# routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

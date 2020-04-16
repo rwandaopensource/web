@@ -2,8 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import propTypes from "prop-types";
 import { getHomeStats } from "../redux/actions/home";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 import TeamWork from "../assets/teamwork.svg";
 import Project from "../assets/project.svg";
 import Member from "../assets/member.svg";
@@ -18,7 +18,7 @@ export class Home extends React.Component {
   }
 
   render() {
-    const { status, members, repos, teams } = this.props;
+    const { status, members, repos, teams, projects } = this.props;
     return (
       <div className="page-container section">
         <Header />
@@ -66,13 +66,22 @@ export class Home extends React.Component {
           </div>
           <div className="columns is-mobile has-text-centered">
             <div className="column">
-              <img src={Project} alt="project" className="icon" />
+              <i className="fas fa-code-branch icon" />
               <br />
               <span className="font-primary title is-6">
                 {status === 200 ? repos : "..."}
               </span>
               <br />
-              Projects
+              Repositories
+            </div>
+            <div className="column">
+              <img src={Project} alt="project" className="icon" />
+              <br />
+              <span className="font-primary title is-6">
+                {status === 200 ? projects : "..."}
+              </span>
+              <br />
+              projects
             </div>
             <div className="column">
               <img src={Team} alt="team" className="icon" />
@@ -113,6 +122,7 @@ Home.propTypes = {
   members: propTypes.number,
   teams: propTypes.number,
   status: propTypes.number,
+  projects: propTypes.number,
   getHomeStats: propTypes.func
 };
 

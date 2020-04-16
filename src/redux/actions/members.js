@@ -1,9 +1,9 @@
 import { membersPageURL } from "../../helpers/url";
 
-export const getMembers = async dispatch => {
+export const getMembers = async (dispatch, page) => {
   let status = 0;
   dispatch({ type: "MEMBERS_PENDING" });
-  fetch(membersPageURL)
+  fetch(membersPageURL(page))
     .then(res => {
       status = res.status;
       return res.json();

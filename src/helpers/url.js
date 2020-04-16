@@ -5,10 +5,10 @@ export const url = (() => {
     return "http://localhost:5000";
   }
   if (/staging/.test(host)) {
-    return "https://api-staging.opensource.org.rw";
+    return "https://opensource-staging.herokuapp.com";
   }
   return "https://api.opensource.org.rw";
 })();
 
 export const homeStatsURL = `${url}/stats/home`;
-export const membersPageURL = `${url}/members`;
+export const membersPageURL = page => `${url}/members?page=${page}`;

@@ -12,6 +12,7 @@ module.exports = {
     main: ['@babel/polyfill', resolve(SRC_DIR, 'index.js')]
   },
   mode,
+  target: 'web',
   output: {
     path: DIST_DIR,
     filename: 'index.js',

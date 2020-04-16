@@ -47,15 +47,13 @@ class Header extends React.Component {
 
         <div id='header-menu' className='navbar-menu'>
           <div className='navbar-end'>
-            <a href='/projects' className='navbar-item header-link'> Projects </a>
+            <a href='/blog' className='navbar-item header-link'> Blog </a>
             <a href='/teams' className='navbar-item header-link'> Teams </a>
             <a href='/members' className='navbar-item header-link'> Members </a>
             <div className='navbar-item has-dropdown is-hoverable'>
               <a className='navbar-link header-link' href='/#' onClick={this.navAnchorPreventRedirect}>  More </a>
               <div className='navbar-dropdown'>
-                <a href='/wiki' className='navbar-item header-link'> Wiki </a>
                 <a href='/services' className='navbar-item header-link'> Services </a>
-                <a href='/about#contact' className='navbar-item header-link'> Contact us </a>
                 <a href='/about' className='navbar-item header-link'> About us </a>
               </div>
             </div>
