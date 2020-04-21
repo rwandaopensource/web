@@ -95,3 +95,6 @@ excel.xlsx
 # json file
 files
 temp
+
+# Local Netlify folder
+.netlify

@@ -1,6 +1,6 @@
 import "../scss/index.scss";
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import NotFound from "./NotFound";
 import Members from "./Members";
@@ -13,14 +13,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/members" component={Members} />
-          <Route path="*" component={NotFound} />{" "}
           {/* this need needs to come after all other routes */}
+          <Route exact path="*" component={NotFound} />
         </Switch>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
