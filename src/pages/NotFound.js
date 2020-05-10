@@ -22,9 +22,9 @@ class NotFound extends React.Component {
           </span>
           <br />
           <p className="subtitle is-1 is-family-monospace">
-              We can&apos;t find the page <br/ >you are looking for.
+             The page you are looking for <br/ > is not yet here.
           </p>
-          <a href="/about" className="button custom-button">
+          <a href="/" className="button custom-button">
                   Go back home
           </a>
           &nbsp; &nbsp; &nbsp;

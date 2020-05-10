@@ -23,6 +23,17 @@ html {
   color: white;
 }
 
+.second-button {
+  border: none !important;
+  border-radius: 0;
+  background-color: white;
+  padding: 2px 30px 2px 30px;
+  margin-top: 5px;
+  font-size: 15px;
+  width: fit-content;
+  color: $primary-color;
+}
+
 .font-primary {
   color: $primary-color;
 }

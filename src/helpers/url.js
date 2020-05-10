@@ -7,8 +7,9 @@ export const url = (() => {
   if (/staging/.test(host)) {
     return "https://opensource-staging.herokuapp.com";
   }
-  return "https://api.opensource.org.rw";
+  return "https://api-opensource.herokuapp.com";
 })();
 
 export const homeStatsURL = `${url}/stats/home`;
 export const membersPageURL = page => `${url}/members?page=${page}`;
+export const contactUsURL = `${url}/contact`;

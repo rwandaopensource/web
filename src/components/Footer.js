@@ -56,7 +56,7 @@ class Footer extends React.Component {
               Contact us{" "}
             </a>
             <br />
-            <a href="/about#join" className="has-text-white">
+            <a href="/about/?s=join#contact" className="has-text-white">
               {" "}
               Join Us{" "}
             </a>

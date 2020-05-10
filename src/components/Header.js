@@ -57,7 +57,7 @@ class Header extends React.Component {
                 <a href='/about' className='navbar-item header-link'> About us </a>
               </div>
             </div>
-            <a href='/about#' className='navbar-item custom-button button has-margin-left-7-mobile has-padding-7-mobile'> Join Us </a>
+            <a href='/about/?s=join#contact' className='navbar-item custom-button button has-margin-left-7-mobile has-padding-7-mobile'> Join Us </a>
           </div>
         </div>
       </nav>
