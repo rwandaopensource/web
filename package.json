@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "serve ./dist",
-    "build": "NODE_ENV=production webpack --config webpack.config.js && yarn favicon",
+    "clean": "rm -rf ./dist",
+    "build": "yarn clean && NODE_ENV=production webpack --config webpack.config.js && yarn favicon",
     "favicon": "cp ./public/favicon.ico ./dist/favicon.ico",
     "test": "NODE_ENV=test jest --c=jest.config.js --logHeapUsage --runInBand  --no-cache  --detectOpenHandles --forceExit",
     "start:dev": "NODE_ENV=development webpack-dev-server --config webpack.config.js --hot",
