@@ -2,7 +2,7 @@
   base = ""
   publish = "dist/"
   command = "yarn build"
-  environment = { YARN_VERSION = "1.22.4", NODE_ENV = "production", NODE_VERSION = "12" }
+  environment = { YARN_VERSION = "1.22.4", NODE_ENV = "development", NODE_VERSION = "12" }
 
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
